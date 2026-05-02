@@ -14,4 +14,6 @@ public class DataContext : DbContext
     }
     
     //TODO: Add DbSet's here
+    public DbSet<ServiceType> ServiceTypes { get; set; }
+    public DbSet<Appointment> Appointments { get; set; }
 }
