@@ -28,14 +28,6 @@ builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 builder.Services.AddValidatorsFromAssembly(typeof(CreateAppointmentRequest).Assembly);
 builder.Services.AddValidatorsFromAssembly(typeof(UpdateAppointmentRequest).Assembly);
 
-// var appAssembly = AppDomain.CurrentDomain
-//     .GetAssemblies()
-//     .First(a => a.GetName().Name == "VehicleServiceBooking.Application");
-//
-// builder.Services.AddValidatorsFromAssembly(appAssembly);
-
-
-
 var provider = builder.Services.BuildServiceProvider();
 var test = provider.GetService<IValidator<CreateAppointmentRequest>>();
 
